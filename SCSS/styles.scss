@@ -152,17 +152,38 @@ h4 {
 .stat-item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     border-radius: 10px;
     background-color: $card-color;
     // grid-column: 1 / -1;
     height: 150px;
     width: 100%;
-    
+}
+.stats-header {
+    color: $text-grey;
+}
+.stat-item p {
+    font-size: 34px;
+    font-weight: 600;
+    margin-top: 20px;
 }
 .stat-item:hover {
     background-color: #47435e;
+    & h3{
+        color: $text-white;
+    }
+    & p {
+        // color: lightgreen;
+        background: rgb(222,83,129);
+    background: -webkit-linear-gradient(15deg, rgba(222,83,129,1) -20%, rgba(240,177,122,1) 120%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+        transform: scale(1.05);
+    }
+}
+.stat-item, h3, p {
+    transition: 0.3s;
 }
 .stream-bar {
     display: grid;
@@ -227,6 +248,13 @@ h4 {
 }
 i {
     color: $text-grey;
+    transition: 0.2s;
+    &.fa-circle-user {
+        color: $text-white;
+    }
+}
+.nav-links i:hover {
+    color: $text-white;
 }
 ul {
     padding-top: 30px;
@@ -236,12 +264,12 @@ li {
     font-size: 12px;
 }
 .check-yes{
-    color: lightgreen;
-    text-shadow: 1px 2px 3px lightgreen;
+    color: rgb(181, 255, 181);
+    text-shadow: 1px 2px 3px rgb(181, 255, 181);
 }
 .icon-yes{
     background: rgb(222,83,129);
-    background: -webkit-linear-gradient(15deg, rgba(222,83,129,1) 0%, rgba(240,177,122,1) 98%);
+    background: -webkit-linear-gradient(15deg, rgba(222,83,129,1) -20%, rgba(240,177,122,1) 120%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
