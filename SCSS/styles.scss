@@ -175,9 +175,75 @@ h4 {
     background-color: $card-color;
     height: 250px;
     border-radius: 10px;
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
 }
 .stat-item, .stream-item {
     box-shadow: 0px 3px 10px $shadow-color;
+}
+.growth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.graph  {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.graph-text-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.graph-item {
+    font-size: 14px;
+}
+.partner {
+    flex-direction: column;
+    align-items: center;
+}
+.partner-section {
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vl {
+    border-left: 6px solid $text-grey;
+    height: 160px;
+    border-radius: 10px;
+}
+.partner-1, .partner-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+i {
+    color: $text-grey;
+}
+ul {
+    padding-top: 30px;
+}
+li {
+    color: $text-grey;
+    font-size: 12px;
+}
+.check-yes{
+    color: lightgreen;
+    text-shadow: 1px 2px 3px lightgreen;
+}
+.icon-yes{
+    background: rgb(222,83,129);
+    background: -webkit-linear-gradient(15deg, rgba(222,83,129,1) 0%, rgba(240,177,122,1) 98%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 footer {
     grid-column: 3 / 13;
