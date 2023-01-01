@@ -10,30 +10,46 @@ $primary-color: #E17682;
     margin: 0;
     padding: 0;
     font-family: 'Quicksand', sans-serif;
+    cursor: default;
 }
 body {
     background: $bg-color;
     color: $text-white;
+    
 }
 .container {
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 125px) repeat(10, 1fr);
     grid-template-rows: 60px;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 header {
     background-color: $card-color;
     grid-column: 3 / 13;
     display: grid;
     grid-auto-flow: column;
+    align-items: center;
     align-content: center;
     height: 60px;
     box-shadow: 0px 3px 10px $shadow-color;
     padding: 0 5%;
 }
+.search-bar {
+    display: flex;
+}
+.min-nav-menu {
+    display: none;
+}
+.min-logo {
+    display: none;
+}
 input{
-    color: $text-white;
+    cursor: text;
     background: $bg-color;
+    color: $text-white;
     outline: none;
     border: none;
     border-radius: 8px;
@@ -41,6 +57,11 @@ input{
     height: 30px;
     width: 250px;
     transition: 0.3s;
+}
+input:hover {
+    transform: scale(1.03);
+    background: transparent;
+    background-color: #47435e;
 }
 input:focus {
     width: 330px;
@@ -54,32 +75,41 @@ input:focus::placeholder {
     justify-content: end;
 }
 aside {
+    font-weight: 500;
     display: grid;
     grid-template-columns: 400px;
     background-color: $card-color;
     grid-column: 1 / 3;
     grid-row: 1 / 13;
     box-shadow: 0px 2px 10px $shadow-color;
+    overflow-y: auto;
+}
+#creator-dash {
+    margin-bottom: 60px;
+    transition: 0.3s;
 }
 .side-bar-content {
     width: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
 }
 .logo-img {
-    margin-top: 3px;
+    margin-top: 5px;
 }
 .main-menu-items {
     height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    margin-bottom: 320px;
+    margin-bottom: 380px;
 }
 .menu-item {
     margin-bottom: 10px;
+}
+.side-bar {
+    height: 100vh;
 }
 .side-bar p {
     width: 170px;
@@ -88,15 +118,22 @@ aside {
     padding-left: 50px;
     vertical-align: middle;
     border-radius: 4px;
+    transition: 0.3s;
+}
+.side-bar h4:hover {
+    color: $text-white;
 }
 .side-bar p:hover {
     background-color: #47435e;
 }
 .content-main {
     grid-column: 3 / 13;
+    grid-row: 2 / 12;;
     display: grid;
     grid-template-columns: 1fr;
-    margin: 30px 5%;
+    grid-template-rows: 1fr 4fr;
+    margin: 20px 5%;
+    overflow-y:  auto
 }
 h4 {
     color: $text-grey;
@@ -106,7 +143,7 @@ h4 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-items: center;
-    overflow: auto;
+    // overflow: auto;
     gap: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -122,10 +159,25 @@ h4 {
     // grid-column: 1 / -1;
     height: 150px;
     width: 100%;
-    box-shadow: 0px 3px 10px $shadow-color;
+    
 }
 .stat-item:hover {
     background-color: #47435e;
+}
+.stream-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 30px;
+    padding-top: 20px;
+}
+.stream-item {
+    background-color: $card-color;
+    height: 250px;
+    border-radius: 10px;
+}
+.stat-item, .stream-item {
+    box-shadow: 0px 3px 10px $shadow-color;
 }
 footer {
     grid-column: 3 / 13;
@@ -138,11 +190,39 @@ footer {
     }
     
 }
+@media (min-width: 1273px) {
+    .stat-bar {
+        grid-template-rows: 130px 1fr;
+    }
+    .stream-bar {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .stats {
+        height: 220px;
+        padding-bottom: 30px;
+    }
+}
 @media (max-width: 780px) {
     aside {
         display: none;
     }
     header, .content-main, footer {
         grid-column: 1 / 13;
+    }
+    .search-bar {
+        display: none;
+    }
+    .min-logo {
+        display: block;
+        margin-left: 30%;
+    }
+    header {
+        display: grid;
+        justify-content: space-between;
+    }
+    .min-nav-menu {
+        display: inline;
     }
 }
