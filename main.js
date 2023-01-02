@@ -19,8 +19,9 @@ burgerBtn.addEventListener("click", () => {
 content.addEventListener("click", (e) => {
     if (e.target != sidebar && sidebar.classList.contains("side-open") == true) {
         header.classList.toggle("nav-to-side")
-      content.classList.toggle("darken-content")
-      sidebar.classList.toggle("side-open")
-      sidebar.classList.toggle("side-hidden")
+        miniLogo.classList.toggle("hide-logo")
+        content.classList.toggle("darken-content")
+        sidebar.classList.toggle("side-open")
+        sidebar.classList.toggle("side-hidden")
     }
 })
