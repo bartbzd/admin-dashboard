@@ -1,6 +1,6 @@
 # Admin Dashboard
 
-![app-picture](https://github.com/bartbzd/admin-dashboard/blob/main/img/mockup.png)
+![app-picture](https://github.com/bartbzd/admin-dashboard/blob/main/img/mockup1.png)
 
 ### [Grid Demo](https://bartbzd.github.io/admin-dashboard/)
 
