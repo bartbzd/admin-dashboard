@@ -20,6 +20,10 @@ body {
     background: $bg-color;
     color: $text-white;
     height: 100vh;
+    user-select: none;         /* No text selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;     /* IE 10 and IE 11 */
+    
 }
 .container {
     height: 100vh;
