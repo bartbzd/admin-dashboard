@@ -483,6 +483,13 @@ footer {
 }
 @media (max-width: 414px) {
     body {
-        font-size: 0.7em;
+        font-size: 0.75em;
     }
+    .side-bar-content {
+        font-size: 1.2em;
+    }
+    p.opt-grid-item-2, p.opt-grid-item-4 {
+        padding-top: 5px;
+        padding-left: 5px;
+     }
 }
