@@ -480,3 +480,8 @@ footer {
         opacity: 20%;
     }
 }
+@media (max-width: 414px) {
+    body {
+        font-size: 0.8em;
+    }
+}
