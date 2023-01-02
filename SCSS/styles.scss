@@ -1,4 +1,3 @@
-:root {
 $bg-color: linear-gradient(70deg, #21202d 20%, #1e1d29 100%);
 $bg-hover: #47435e;
 $card-color: #2E2C3D;
@@ -10,7 +9,7 @@ $secondary-color: #e6b482;
 $weak-color: #e3658f;
 $medium-color: #fac48e;
 $strong-color: #b3a6ff;
-}
+
 * {
     margin: 0;
     padding: 0;
@@ -67,17 +66,18 @@ input{
     height: 30px;
     width: 250px;
     transition: 0.3s;
-}
-input:hover {
-    transform: scale(1.03);
-    background: transparent;
-    background-color: $bg-hover;
-}
-input:focus {
-    width: 330px;
-}
-input:focus::placeholder {
-  color: transparent;
+
+    &:hover {
+        transform: scale(1.03);
+        background: transparent;
+        background-color: $bg-hover;
+    }
+    &:focus {
+        width: 330px;
+    }
+    &:focus::placeholder {
+        color: transparent;
+    }
 }
 .nav-links {
     display: grid;
@@ -117,30 +117,32 @@ aside {
 }
 .menu-item {
     margin-bottom: 10px;
+
+    i {
+    margin-right: 10px;
+    margin-left: -10px;
+    }
 }
 .side-bar {
     height: 100vh;
-}
-.menu-item i {
-    margin-right: 10px;
-    margin-left: -10px;
-}
-.side-bar p {
-    width: 170px;
-    height: 40px;
-    line-height: 40px;
-    padding-left: 50px;
-    vertical-align: middle;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-.side-bar h4:hover {
-    color: $text-white;
-}
-.side-bar p:hover {
-    background-color: $bg-hover;
 
-    & i {
+    p {
+        width: 170px;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 50px;
+        vertical-align: middle;
+        border-radius: 4px;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: $bg-hover;
+        }
+    }
+    h4:hover {
+        color: $text-white;
+    }
+    i {
         color: $text-white;
     }
 }
@@ -179,30 +181,32 @@ h4 {
     background-color: $card-color;
     height: 140px;
     width: 100%;
-}
-.stats-header {
-    color: $text-grey;
-}
-.stat-item p {
-    font-size: 34px;
-    font-weight: 600;
-    margin-top: 20px;
-}
-.stat-item:hover {
-    background-color: $bg-hover;
-    & h3{
-        color: $text-white;
+
+    p {
+        font-size: 34px;
+        font-weight: 600;
+        margin-top: 20px;
     }
-    & p {
-        background: rgb(222,83,129);
-        background: -webkit-linear-gradient(15deg, $primary-color -20%, $secondary-color 120%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        transform: scale(1.05);
+
+    &:hover {
+        background-color: $bg-hover;
+        h3{
+            color: $text-white;
+        }
+        p {
+            background: rgb(222,83,129);
+            background: -webkit-linear-gradient(15deg, $primary-color -20%, $secondary-color 120%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transform: scale(1.05);
+        }   
     }
 }
 .stat-item, h3, p {
     transition: 0.3s;
+}
+.stats-header {
+    color: $text-grey;
 }
 .stream-bar {
     display: grid;
