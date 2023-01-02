@@ -137,12 +137,13 @@ aside {
 
         &:hover {
             background-color: $bg-hover;
+            i {
+            color: $text-white;
+            }
         }
+        
     }
     h4:hover {
-        color: $text-white;
-    }
-    i {
         color: $text-white;
     }
 }
