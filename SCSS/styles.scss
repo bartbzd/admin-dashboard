@@ -216,6 +216,9 @@ h4 {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             transform: scale(1.05);
+            padding: 1px;
+            clip-path: inset(1px);
+            
         }   
     }
 }
