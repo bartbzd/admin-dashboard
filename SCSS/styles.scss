@@ -213,6 +213,7 @@ h4 {
         p {
             background: rgb(222,83,129);
             background: -webkit-linear-gradient(15deg, $primary-color -20%, $secondary-color 120%);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             transform: scale(1.05);
@@ -315,6 +316,7 @@ li {
 .icon-yes{
     background: rgb(222,83,129);
     background: -webkit-linear-gradient(15deg, $primary-color 0%, $secondary-color 120%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
